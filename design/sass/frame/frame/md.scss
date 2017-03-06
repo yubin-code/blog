@@ -1,0 +1,80 @@
+.markdown{
+  color:#888;
+  // 标题
+  h1,h2,h3,h4,h5,h6 {
+    padding-bottom: 16px;
+    padding-top: 32px;
+    color:#666;
+  }
+  h1 {
+    font-size:22px;
+  }
+  h2 {
+    font-size:20px;
+  }
+  h3 {
+    font-size:18px;
+  }
+  h4 {
+    font-size:16px;
+  }
+  h5 {
+    font-size:14px;
+  }
+  h6 {
+    font-size:12px;
+  }
+
+  h2,h3,h4,h5,h6{color:#666;}
+
+  hr {
+    border:none;
+    border-bottom: 1px solid #eee;
+    margin:18px 0;
+  }
+
+  p {
+    font-size:14px;
+  }
+
+  // 摘要
+  blockquote{
+    padding:10px 0;
+    padding-left:15px;
+    margin:20px 0;
+    display: block;
+    color:#999;
+    border-left:3px solid #ccc;
+  }
+
+  // 表格
+  table {
+    border-collapse:collapse;
+    margin-top:10px;
+    width:100%;
+    
+    tr {
+      height: 30px;
+    }
+
+    thead > tr > th {
+      text-align: left;
+      font-weight: bold;
+      vertical-align:bottom;
+      color:#666;
+      padding:10px;
+      border-bottom:2px solid #ccc;
+    }
+    
+    tbody>tr:nth-child(odd){
+      background-color:#f9f9f9;
+    }
+
+    tbody > tr > td {
+      vertical-align: top;
+      padding:10px;
+      color:#666;
+      border-top:1px solid #ccc;
+    }
+  }
+}

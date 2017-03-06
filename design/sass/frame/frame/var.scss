@@ -1,0 +1,48 @@
+$grid-gutter-width:         30px !default;
+$grid-columns:              12 !default;
+$gray-base:                 #e44a3e;
+$gray-light:                #777;
+
+$screen-ti-min:             400px !default;
+$screen-sm-min:             768px !default;
+$screen-md-min:             992px !default;
+$screen-lg-min:             1200px !default;
+
+
+
+$nav-link-padding:                  10px 15px !default;
+$nav-link-hover-bg:                 $gray-base !default;
+$nav-disabled-link-color:           $gray-light !default;
+$nav-disabled-link-hover-color:     $gray-light !default;
+
+$cursor-disabled:                not-allowed !default;
+$link-color:                     #428bca !default;
+
+// Small screen / tablet
+$container-tablet:             (720px + $grid-gutter-width) !default;
+//** For `$screen-sm-min` and up.
+$container-sm:                 $container-tablet !default;
+
+// Medium screen / desktop
+$container-desktop:            (940px + $grid-gutter-width) !default;
+//** For `$screen-md-min` and up.
+$container-md:                 $container-desktop !default;
+
+// Large screen / wide desktop
+$container-large-desktop:      (1140px + $grid-gutter-width) !default;
+//** For `$screen-lg-min` and up.
+$container-lg:                 $container-large-desktop !default;
+
+// var 
+// mixins 
+
+
+ // button 
+// form 
+// grid 
+// code 
+// type 
+// ionc 
+// normalize 
+
+// Components

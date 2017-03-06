@@ -1,0 +1,53 @@
+.nav {
+    margin-bottom: 0;
+    padding-left: 0; // Override default ul/ol
+    list-style: none;
+    @include clearfix;
+    > li {
+      position: relative;
+      display: block;
+      > a {
+        position: relative;
+        display: block;
+        padding: $nav-link-padding;
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          background-color: $nav-link-hover-bg;
+        }
+      } 
+    // Prevent IE8 from misplacing imgs
+    //
+    // See https://github.com/h5bp/html5-boilerplate/issues/984#issuecomment-3985989
+    > li > a > img {
+      max-width: none;
+    }
+  }
+}
+
+.navbar{
+  > li {
+    float:left;
+    > a{
+      padding:15px 20px;
+      color:#fff;
+      line-height: 20px;
+      font-size: 14px;
+    }
+  }
+  &:after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar{
+    > li {
+      > a{
+        padding:25px 20px;
+      }
+    }
+  }
+}

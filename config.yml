@@ -1,0 +1,22 @@
+# 菜单
+menu: 
+ - name: 首页
+   icon: xxx
+   url: /
+ - name: 关于我
+   icon: xxx
+   url: /author
+
+# 分页显示
+page: 2
+rows: 3
+
+
+# 是否开启缓存
+iscache: true
+
+
+# 文章类别
+categoryArticle:
+  - js
+  - php

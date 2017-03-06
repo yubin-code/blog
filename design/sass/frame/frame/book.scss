@@ -1,0 +1,111 @@
+.book{
+  position: absolute;
+  left:0;top:0;
+  bottom: 0;right:0;
+  overflow: hidden;
+  background: #fff;
+  font-family: "Helvetica Neue",Helvetica,Arial;
+  h1 {
+    font-size: 18px;
+    padding: 0 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #5C6B77;
+  }
+  // 展开侧栏
+  .slide-ber{
+    position: absolute;
+    left:0;top:0;
+    bottom: 0;
+    width:100%;
+    &.slide-open{
+      left:300px;
+    }
+  }
+  .book-bar{
+    position: absolute;
+    left:0;top:0;
+    bottom:0;
+    width:300px;
+    background: #fafafa;
+    z-index: 999;
+    // 显示目录的图标
+    .ctalog{
+      // display: none;
+      position: absolute;
+      right:-46px;
+      top:5px;
+      background:#fafafa;
+      border: 1px solid rgba(0,0,0,.07);
+      border-left:none;
+      padding:10px;
+      display: none;
+      font-size:12px;
+      color:#b9b9b9;
+
+    }
+  }
+  .book-navbar{
+    overflow-x: hidden;
+    overflow-y: auto;
+    width:100%;
+    height:100%;
+    .bar{
+      padding-bottom: 50px;
+      > li {
+        padding-left:15px;
+        line-height: 36px;
+        a{
+          padding-left:5px;
+          display: block;
+          color:#7D7D7D;
+          transition: ease .3s;
+          &:hover{
+            color:#FF5E52;
+          }
+          &.action {
+            color:#FF5E52;
+          }
+        }
+      }
+    }
+  }
+  
+  .main{
+    position: absolute;
+    left:300px;top:0;
+    bottom:0;right:0;
+    overflow-x: hidden;
+    overflow-y:auto;
+    padding-bottom: 50px;
+    background: #fff;
+    border-left: 1px solid rgba(0,0,0,.07);
+    .article{
+        padding:0 30px;
+        p {color:#888}
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .book{
+      .slide-ber{
+        transition:ease .3s;
+      }
+      .book-bar{
+        left:-300px;
+        .ctalog{
+            display: block;
+        }
+      }
+      .main{
+        left:0;
+        .article{
+          padding:10px;
+        }
+      }
+  }
+  .slide-ber{
+
+  }
+}

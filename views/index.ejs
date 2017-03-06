@@ -1,0 +1,45 @@
+<%include header%>
+<div class="container">
+    <div class="col-sm-9 col-xs-12">
+        <% if(category !=''){%>
+        <div class="lable">
+           <%= category%>
+        </div>
+        <% }%>
+        <ul class="list article">
+            <% mdlist.data.forEach(function(item){ %>
+                <li>
+                    <h1 class="h1"><a href="/article/<%= item.category %><% if(item.category != ''){ %>/<% }%><%= item.title %>/article"><%= item.title %></a><span><%= item.time %></span></h1>
+                    <div class="center markdown">
+                        <%- item.html %>
+                        <a href="/article/<%= item.category %><% if(item.category != ''){ %>/<% }%><%= item.title %>/article" class="articlebtn">阅读全文</a>
+                    </div>
+                </li>
+            <% }) %>
+        </ul>
+        <% if(mdlist.data.length < 1) {%>
+            没有任何数据！
+        <% }%>
+        <ul>
+            <% for(var i=1;i <= mdlist.max;i++){ %>
+            <li>
+                <a href="/<%= category =='' ? 'article': ('category/' + category)%>/<%= i %>"><%= i %></a>
+            </li>
+            <% } %>
+        </ul>
+    </div> 
+    <div class="col-sm-3 hide-7">
+        <div class="win cat">
+            <h1>类别</h1> 
+            <div class="center">
+            <% categoryArticle.forEach(function (item){%>
+                <a href="/category/<%= item %>">
+                    <span><%= item %></span>
+                </a>
+            <% }) %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%include footer%>

@@ -1,0 +1,36 @@
+<%include header%>
+<div class="container">
+    <div class="col-sm-9 col-xs-12">
+        <div class="article">
+            <h1 class="h1"><%= title %><span class="time"><%= time %></span></h1>
+            <div class="center markdown">
+              <%- html%>
+            </div>
+        </div>
+        <!-- 评价部分 -->
+        <div id="app"></div>
+    </div>
+    <div class="col-sm-3 hide-7">
+        <div class="win cat">
+            <h1>类别</h1> 
+            <div class="center">
+            <% categoryArticle.forEach(function (item){%>
+                <a href="/category/<%= item %>">
+                    <span><%= item %></span>
+                </a>
+            <% }) %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// appid, 告诉我域名 
+window.cof = {
+    appid: 'yubin',
+}
+// http://127.0.0.1:3000,http://localhost:8080,http://localhost,http://localhost:8080,http://127.0.0.1:8080,http://www.a.com:8080,http://www.b.com:8080,http://localhost:3000,
+</script>
+<script type="text/javascript" src="https://api.yubin6.cn/js/comment.js" ></script>
+
+<%include footer%>
